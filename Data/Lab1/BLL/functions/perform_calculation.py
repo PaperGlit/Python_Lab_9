@@ -3,6 +3,7 @@ from Data.Shared.classes.history import History
 from GlobalVariables import memory_operations
 from Data.Shared.classes.validators import Validators
 
+
 #False - continue; True - break
 def perform():
     num1 = Validators.validate_num(num_prompt.prompt(1))

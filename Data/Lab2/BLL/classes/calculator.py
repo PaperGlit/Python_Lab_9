@@ -2,9 +2,7 @@ from Data.Shared.classes.history import History
 
 
 class Calculator:
-    digits = 3
-
-    def __init__(self, num1, num2, operator, digits):
+    def __init__(self, num1, num2, operator, digits=3):
         self.num1 = num1
         self.num2 = num2
         self.operator = operator

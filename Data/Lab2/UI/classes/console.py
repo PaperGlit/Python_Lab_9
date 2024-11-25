@@ -1,9 +1,13 @@
 from Data.Lab2.BLL.classes.calculator import Calculator
 from Data.Shared.classes.history import History
 from Data.Shared.classes.validators import Validators
+import logging
 from GlobalVariables import memory_operations
 import GlobalVariables as GlobalVariables
 
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class Console:
     _instances = {}
@@ -27,8 +31,11 @@ class Console:
                          "Your choice: ")
             match case:
                 case "1":
-                    if Console.calculator():
-                        return
+                    try:
+                        if Console.calculator():
+                            return
+                    except ValueError as e:
+                        print(e)
                 case "2":
                     History.read()
                 case "3":
@@ -38,6 +45,7 @@ class Console:
 
     @staticmethod
     def calculator():
+        logger.info("[Lab 2] Started performing calculation")
         num1 = Validators.validate_num("\nEnter first number (or MR / MC): ")
 
         operator = Validators.validate_operator()

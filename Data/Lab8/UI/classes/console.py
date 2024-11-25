@@ -2,7 +2,11 @@ from Data.Lab8.BLL.classes.data_processor import DataProcessor
 from Data.Shared.classes.data_io import DataIO
 import matplotlib.pyplot as plt
 import seaborn as sns
+import logging
 
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class Console:
     _instances = {}
@@ -46,6 +50,7 @@ class Console:
         DataIO.save_visualization(fig, "basic_visualization")
         plt.tight_layout()
         plt.show()
+        logger.info("[Lab 8] Ended making basic graph")
 
     def advanced_visualization(self):
         prepared_data = DataProcessor.prepare_data(self.data, self.group_column, self.value_column)
@@ -57,6 +62,7 @@ class Console:
         DataIO.save_visualization(fig, "advanced_visualization_histogram")
         plt.tight_layout()
         plt.show()
+        logger.info("[Lab 8] Ended making advanced graph")
 
     def multiple_subplots(self):
         prepared_data = DataProcessor.prepare_data(self.data, self.group_column, self.value_column)
@@ -74,6 +80,7 @@ class Console:
         DataIO.save_visualization(fig, "multiple_subplots_with_categories")
         plt.tight_layout()
         plt.show()
+        logger.info("[Lab 8] Ended making multiple graphs")
 
     def main(self):
         try:
@@ -88,12 +95,16 @@ class Console:
                            "Your choice: ")
             match prompt:
                 case '1':
+                    logger.info("[Lab 8] Found extreme values")
                     DataProcessor.find_extreme_values(self.data)
                 case '2':
+                    logger.info("[Lab 8] Started making basic graph")
                     self.basic_visualization()
                 case '3':
+                    logger.info("[Lab 8] Started making advanced graph")
                     self.advanced_visualization()
                 case '4':
+                    logger.info("[Lab 8] Started making multiple graphs")
                     self.multiple_subplots()
                 case _:
                     return

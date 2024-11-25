@@ -4,7 +4,11 @@ from Data.Shared.classes.validators import Validators
 from Data.Shared.classes.unit_test import UnitTest
 from GlobalVariables import memory_operations
 import unittest
+import logging
 
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class Console:
     _instances = {}
@@ -29,12 +33,19 @@ class Console:
                          "Your choice: ")
             match case:
                 case "1":
-                    self.calculator()
+                    logger.info("[Lab 6] Started performing calculation")
+                    try:
+                        self.calculator()
+                    except ValueError as e:
+                        print(e)
                 case "2":
+                    logger.info("[Lab 6] Read history")
                     History.read()
                 case "3":
+                    logger.info("[Lab 6] Opened setting menu")
                     self.settings()
                 case "4":
+                    logger.info("[Lab 6] Started unit tests")
                     self.run_unit_tests()
                 case _:
                     return
@@ -45,6 +56,7 @@ class Console:
         suite = unittest.defaultTestLoader.loadTestsFromTestCase(UnitTest)
         runner = unittest.TextTestRunner()
         runner.run(suite)
+        return
 
     def calculator(self):
         num1 = Validators.validate_num("\nEnter first number (or MR / MC): ")

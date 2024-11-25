@@ -4,7 +4,11 @@ import GlobalVariables as Global
 from Data.Lab3.BLL.classes.ascii import Ascii
 from pyfiglet import FigletFont, figlet_format
 from Data.Shared.classes.data_io import DataIO
+import logging
 
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class Console:
     _instances = {}
@@ -32,16 +36,21 @@ class Console:
                            "Your choice: ")
             match prompt:
                 case "1":
+                    logger.info("[Lab 3] Started entering text")
                     Console.enter_text()
                 case "2":
+                    logger.info("[Lab 3] Selected font automatically")
                     Console.auto_font()
                 case "3":
+                    logger.info("[Lab 3] Changed font")
                     Console.change_font()
                 case "4":
                     print("Current font: " + Global.font)
                 case "5":
+                    logger.info("[Lab 3] Changed width and height")
                     Console.change_width_and_height()
                 case "6":
+                    logger.info("[Lab 3] Changed color")
                     Console.change_color()
                 case _:
                     return

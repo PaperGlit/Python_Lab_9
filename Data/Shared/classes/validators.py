@@ -5,6 +5,11 @@ from Data.Shared.classes.data_io import DataIO
 from Data.Lab5.BLL.classes.cube import Cube
 from Data.Lab5.BLL.classes.pyramid import Pyramid
 from Data.Lab5.BLL.classes.sphere import Sphere
+import logging
+
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 
 class Validators:
@@ -15,8 +20,10 @@ class Validators:
             if digits >= 0:
                 return digits
             else:
+                logger.warning("Error: Invalid input")
                 raise ValueError("Invalid input, please enter a valid non-negative integer number")
         except ValueError:
+            logger.warning("Error: Invalid input")
             raise ValueError("Invalid input, please enter a valid non-negative integer number")
 
     @staticmethod
@@ -36,6 +43,7 @@ class Validators:
                 GlobalVariables.memory -= num
                 print("Memory value updated and saved into history! Current value: " + str(GlobalVariables.memory))
             case _:
+                logger.warning("Error occurred during memory validation")
                 raise ValueError("Error occurred during memory validation")
 
     @staticmethod
@@ -53,6 +61,7 @@ class Validators:
                 try:
                     return round(float(value))
                 except ValueError:
+                    logger.warning("Error occurred during memory validation")
                     raise ValueError("Please enter a valid number / memory operation")
 
     @staticmethod
@@ -60,6 +69,7 @@ class Validators:
         try:
             return round(float(value), digits)
         except ValueError:
+            logger.warning("Error occurred during number validation")
             raise ValueError("Please enter a valid number")
 
     @staticmethod
@@ -69,24 +79,30 @@ class Validators:
             if operator in GlobalVariables.operands or operator in GlobalVariables.memory_operations:
                 return operator
             else:
+                logger.warning("Error occurred during operator validation")
                 raise ValueError("Please enter a valid operator")
 
     @staticmethod
     def validate_main_prompt(prompt, console):
         match prompt:
             case "1":
+                logger.info("[Lab 4] Started entering text")
                 console.enter_text()
                 return True
             case "2":
+                logger.info("[Lab 4] Started changing symbols")
                 console.change_symbols()
                 return True
             case "3":
+                logger.info("[Lab 4] Started changing width and height")
                 console.change_width_and_height()
                 return True
             case "4":
+                logger.info("[Lab 4] Started changing color")
                 console.change_color()
                 return True
             case "5":
+                logger.info("[Lab 4] Started changing position")
                 console.justify()
                 return True
             case _:
@@ -98,6 +114,7 @@ class Validators:
             try:
                 DataIO.upload_to_file(text)
             except IOError:
+                logger.warning("Error occurred during file upload")
                 print("The file could not be uploaded, please try again")
 
     @staticmethod
@@ -115,6 +132,7 @@ class Validators:
                         raise ValueError("Wrong type detected")
                 return
             else:
+                logger.warning("Error occurred during shading validation")
                 print("Please enter a valid shading symbol (only one allowed)")
 
     @staticmethod
@@ -126,6 +144,7 @@ class Validators:
                 print("Width changed successfully")
                 return
             except ValueError:
+                logger.warning("Error occurred during dimensions validation")
                 print("Please enter an integer")
 
     @staticmethod
@@ -150,6 +169,7 @@ class Validators:
             case "0":
                 console.ascii.color = "\033[39m"
             case _:
+                logger.warning("Error occurred during color validation")
                 print("Invalid color choice, please try again.")
                 return
         print("Color changed successfully")
@@ -165,6 +185,7 @@ class Validators:
             case "3":
                 console.ascii.justify = "right"
             case "_":
+                logger.warning("Error occurred during justify validation")
                 print("Invalid orientation choice, please try again.")
                 return
         print("Orientation changed successfully")
@@ -186,6 +207,7 @@ class Validators:
             if not (min_value < result < max_value):
                 raise ValueError("Incorrect value, please try again.")
         except ValueError:
+            logger.warning("Error occurred during value validation")
             raise ValueError("Incorrect value, please try again.")
         return result
 
@@ -199,20 +221,26 @@ class Validators:
             case 3:
                 return Sphere(size)
             case _:
+                logger.warning("Error occurred during shape validation")
                 raise ValueError("Incorrect value, please try again.")
 
     @staticmethod
     def main_prompt(value, console):
         match value:
             case "1":
+                logger.info("[Lab 5] Started creating shape")
                 console.create_shape()
             case "2":
+                logger.info("[Lab 5] Changing size")
                 console.change_size()
             case "3":
+                logger.info("[Lab 5] Moving shape")
                 console.move_shape()
             case "4":
+                logger.info("[Lab 5] Changing color")
                 console.change_color()
             case "5":
                 print(console.shape)
             case _:
+                logger.warning("Error occurred during shape validation")
                 raise ValueError("Incorrect value, please try again.")
