@@ -1,37 +1,40 @@
+"""Used to load/upload files"""
+import os
 import pandas as pd
 from mpld3 import fig_to_html
-import os
-import logging
+from Data.Shared.functions.logger import logger
 
-
-logger = logging.getLogger(__name__)
-logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class DataIO:
+    """Class to load/upload files"""
     @staticmethod
     def load_data(file_path):
+        """Loads data from file"""
         try:
             data = pd.read_csv(file_path)
             print("Data loaded successfully!")
             return data
-        except Exception as e:
-            logger.error(f"[Lab 8] Error loading data: {e}")
-            raise FileNotFoundError(f"Error loading data: {e}")
+        except FileNotFoundError as e:
+            logger.error("[Lab 8] Error loading data: %s", e)
+            print(f"Error loading data: {e}")
+        return None
 
     @staticmethod
     def save_visualization(fig, filename):
+        """Saves figure to file"""
         fig.savefig(f"Exports/{filename}.png")
         print(f"Saved: {filename}.png")
         try:
             html_content = fig_to_html(fig)
-            with open(f"Exports/{filename}.html", "w") as html_file:
+            with open(f"Exports/{filename}.html", "w", encoding="utf-8") as html_file:
                 html_file.write(html_content)
             print(f"Saved: {filename}.html (interactive)")
-        except Exception as e:
+        except IOError as e:
             print(f"Failed to save {filename}.html: {e}")
 
     @staticmethod
     def upload_to_file(data):
+        """Uploads data to file"""
         while True:
             file_name = input("Enter file name: ")
             if file_name.strip() != "":
@@ -40,11 +43,11 @@ class DataIO:
                 try:
                     if not os.path.exists("Exports/"):
                         os.makedirs("Exports/")
-                    with open("Exports/" + file_name, 'w') as f:
+                    with open("Exports/" + file_name, 'w', encoding="utf-8") as f:
                         f.write(data)
                     print("The art was uploaded successfully")
                     break
-                except IOError:
-                    raise IOError("The file could not be uploaded, please try again")
+                except IOError as e:
+                    print(f"Error uploading data: {e}")
             else:
                 print("Please enter a valid file name")

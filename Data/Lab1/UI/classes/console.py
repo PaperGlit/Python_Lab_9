@@ -1,27 +1,25 @@
+"""Outputs the lab's main menu"""
 from Data.Shared.classes.history import History
 from Data.Lab1.UI.functions import calculator_settings
 from Data.Lab1.BLL.functions import perform_calculation
-import logging
+from Data.Shared.functions.logger import logger
 
-
-logger = logging.getLogger(__name__)
-logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class Console:
-    _instances = {}
+    """The class of the main menu of this lab work"""
+    instance = None
 
-    def __call__(self, *args, **kwargs):
-        if self not in self._instances:
-            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
-        else:
-            self._instances[self].__init__(*args, **kwargs)
-        return self._instances[self]
+    def __new__(cls):
+        if cls.instance is None:
+            cls.instance = super(Console, cls).__new__(cls)
+        return cls.instance
 
     def __init__(self):
         self.main()
 
     @staticmethod
     def main():
+        """The main menu of this lab work"""
         while True:
             case = input("1 - Calculate a number, 2 - View history, 3 - Additional settings: ")
             try:
@@ -38,5 +36,5 @@ class Console:
                         calculator_settings.settings()
                     case _:
                         return
-            except Exception as e:
+            except ValueError as e:
                 print(e)

@@ -1,3 +1,4 @@
+"""The user interface of the lab work"""
 import Data.Lab1.UI.classes.console
 import Data.Lab2.UI.classes.console
 import Data.Lab3.UI.classes.console
@@ -6,27 +7,25 @@ import Data.Lab5.UI.classes.console
 import Data.Lab6.UI.classes.console
 import Data.Lab7.UI.classes.console
 import Data.Lab8.UI.classes.console
-import logging
+from Data.Shared.functions.logger import logger
 
-
-logger = logging.getLogger(__name__)
-logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class Console:
-    _instances = {}
+    """The console class of this lab work"""
+    instance = None
 
-    def __call__(self, *args, **kwargs):
-        if self not in self._instances:
-            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
-        else:
-            self._instances[self].__init__(*args, **kwargs)
-        return self._instances[self]
+    def __new__(cls):
+        if cls.instance is None:
+            cls.instance = super(Console, cls).__new__(cls)
+        return cls.instance
 
     def __init__(self):
         logger.info("Started the program")
         self.main()
 
-    def main(self):
+    @staticmethod
+    def main():
+        """The main menu of this lab work"""
         while True:
             prompt = input("Select lab work (1-8): ")
             match prompt:
@@ -57,4 +56,4 @@ class Console:
                 case _:
                     logger.info("Ended the program")
                     break
-            logger.info(f"Ended Lab {prompt}")
+            logger.info("Ended Lab %s", prompt)

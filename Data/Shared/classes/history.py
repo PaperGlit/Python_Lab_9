@@ -1,20 +1,21 @@
-import logging
+"""Manages the history functionality"""
+from Data.Shared.functions.logger import logger
 
-
-logger = logging.getLogger(__name__)
-logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class History:
+    """The class that manages the history functionality"""
     @staticmethod
     def clear():
+        """Clears the history"""
         logger.info("Clearing history")
-        with open("Exports/history.txt", "w"):
+        with open("Exports/history.txt", "w", encoding="utf-8"):
             pass
 
     @staticmethod
     def read():
+        """Reads the history"""
         logger.info("Reading history...")
-        with open("Exports/history.txt", "r") as file:
+        with open("Exports/history.txt", "r", encoding="utf-8") as file:
             history = file.read()
             if not history:
                 print("Your history is empty!")
@@ -23,6 +24,8 @@ class History:
 
     @staticmethod
     def write(num1, num2, operator, result):
+        """Writes the operation into the history"""
         logger.info("Writing history...")
-        with open("Exports/history.txt", "a") as history_file:
-            history_file.write(str(num1) + " " + operator + " " + str(num2) + " = " + str(result) + "\n")
+        with open("Exports/history.txt", "a", encoding="utf-8") as history_file:
+            history_file.write(str(num1) + " " + operator + " " +
+                               str(num2) + " = " + str(result) + "\n")

@@ -1,30 +1,28 @@
-from Data.Lab6.BLL.classes.calculator import Calculator
+"""The user interface of the lab work"""
+import unittest
+import global_variables
+from Data.Shared.functions.calculator import calculate
 from Data.Shared.classes.history import History
 from Data.Shared.classes.validators import Validators
 from Data.Shared.classes.unit_test import UnitTest
-from GlobalVariables import memory_operations
-import unittest
-import logging
-
-
-logger = logging.getLogger(__name__)
-logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
+from Data.Shared.functions.logger import logger
+from Data.Shared.classes.unit_test import UnitTest
 
 class Console:
-    _instances = {}
+    """The console class of this lab work"""
+    instance = None
 
-    def __call__(self, *args, **kwargs):
-        if self not in self._instances:
-            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
-        else:
-            self._instances[self].__init__(*args, **kwargs)
-        return self._instances[self]
+    def __new__(cls):
+        if cls.instance is None:
+            cls.instance = super(Console, cls).__new__(cls)
+        return cls.instance
 
     def __init__(self, digits = 3):
         self.digits = digits
-        self.prompt()
+        self.main()
 
-    def prompt(self):
+    def main(self):
+        """The main menu of this lab work"""
         while True:
             case = input("\n1 - Calculate a number \n"
                          "2 - View history \n"
@@ -46,54 +44,51 @@ class Console:
                     self.settings()
                 case "4":
                     logger.info("[Lab 6] Started unit tests")
-                    self.run_unit_tests()
+                    UnitTest.run_unit_tests()
                 case _:
                     return
 
     @staticmethod
-    def run_unit_tests():
-        print("Running unit tests...\n")
-        suite = unittest.defaultTestLoader.loadTestsFromTestCase(UnitTest)
-        runner = unittest.TextTestRunner()
-        runner.run(suite)
-        return
-
-    def calculator(self):
+    def calculator():
+        """Does all the verifications before calculating a number"""
         num1 = Validators.validate_num("\nEnter first number (or MR / MC): ")
         operator = Validators.validate_operator()
-        if operator in memory_operations:
+        if operator in global_variables.MEMORY_OPERATIONS:
             Validators.validate_memory(operator, num1)
             return False
         num2 = Validators.validate_num("Enter second number (or MR / MC): ")
         try:
-            result = Calculator(num1, num2, operator, self.digits)
+            result = calculate(num1, num2, operator)
         except ZeroDivisionError:
             print("Error: cannot divide by zero")
             return False
-        print("Result : " + str(result.result))
+        print("Result : " + str(result))
         try_again = input("\nCalculation has finished successfully! \n"
                           "Current options: \n"
                           "Try again? (Y / N) \n"
                           "Store a value into memory? (MS / M+ / M-) \n"
                           "Your choice: ").lower()
-        if try_again in memory_operations:
-            Validators.validate_memory(try_again, result.result)
-        elif try_again == "y":
-            return False
-        else:
+        if try_again in global_variables.MEMORY_OPERATIONS:
+            Validators.validate_memory(try_again, result)
             return True
-
+        if try_again == "y":
+            return False
+        return True
 
     def settings(self):
-        settings_prompt = input("\n1 - Change the amount of digits after a decimal point in a number \n"
+        """Allows to change digits after a decimal point in a number or to clear history"""
+        settings_prompt = input("\n1 - Change the amount of digits"
+                                " after a decimal point in a number \n"
                                 "2 - Clear history\n"
                                 "Your choice: ")
         match settings_prompt:
             case "1":
                 while True:
-                    digits_prompt = input("\nEnter the amount of digits (Current value: " + str(self.digits) + "): ")
+                    digits_prompt = input("\nEnter the amount of digits (Current value: "
+                                          + str(self.digits) + "): ")
                     try:
                         self.digits = Validators.validate_digits(digits_prompt)
+                        global_variables.DIGITS = self.digits
                         print("Settings changed successfully\n")
                         break
                     except ValueError as e:

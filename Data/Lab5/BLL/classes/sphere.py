@@ -1,8 +1,11 @@
+"""A sphere shape"""
 from Data.Lab5.BLL.classes.shape import Shape
 
 
 class Sphere(Shape):
+    """A sphere shape class"""
     def create_shape(self):
+        """Creates a sphere shape"""
         shape = self.create_array(self.size, self.size)
         center = (self.size + 1) // 2
         if self.size % 2 == 0:
@@ -21,6 +24,7 @@ class Sphere(Shape):
         return final_shape
 
     def create_circle(self, diameter):
+        """Creates a circle shape"""
         result = [[" " for _ in range(diameter)] for _ in range(diameter)]
         radius = diameter / 2 - .5
         r = (radius + .25) ** 2 + 1
@@ -35,9 +39,11 @@ class Sphere(Shape):
         return self.expand_array(result)
 
     def expand_array(self, array2):
+        """Expands an array"""
         array1 = [[" " for _ in range(self.size)] for _ in range(self.size)]
         expand_start = (len(array1) - len(array2)) // 2
-        expand_end = self.size - expand_start if (len(array1) - len(array2)) % 2 == 0 else self.size - expand_start - 1
+        expand_end = self.size - expand_start if (
+                (len(array1) - len(array2)) % 2 == 0) else self.size - expand_start - 1
         i1, j1 = 0, 0
         for i in range(expand_start, expand_end):
             for j in range(expand_start, expand_end):
@@ -48,6 +54,7 @@ class Sphere(Shape):
         return array1
 
     def to_2d(self):
+        """Transforms the sphere into a 2D string array"""
         shape = self.shape
         z_offset = max(0, -self.pos_z)
         depth = len(shape)

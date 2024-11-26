@@ -1,31 +1,31 @@
-from GlobalVariables import *
+"""The user interface of the lab work"""
+import requests
+from rich.console import Console as RichConsole
+from rich.table import Table
+import global_variables
 from Data.Lab7.BLL.classes.unit_of_work import UnitOfWork
 from Data.Lab7.DAL.classes.database_handler import DBHandler
 from Data.Lab7.BLL.classes.network_request import NetworkRequest
-from rich.console import Console as RichConsole
-from rich.table import Table
-import logging
+from Data.Shared.classes.unit_test import UnitTest
+from Data.Shared.functions.logger import logger
 
-
-logger = logging.getLogger(__name__)
-logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class Console:
-    _instances = {}
+    """The console class of this lab work"""
+    instance = None
 
-    def __call__(self, *args, **kwargs):
-        if self not in self._instances:
-            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
-        else:
-            self._instances[self].__init__(*args, **kwargs)
-        return self._instances[self]
+    def __new__(cls):
+        if cls.instance is None:
+            cls.instance = super(Console, cls).__new__(cls)
+        return cls.instance
 
     def __init__(self):
-        self.uow = UnitOfWork(base_api_url)
+        self.uow = UnitOfWork(global_variables.BASE_API_URL)
         self.db_handler = DBHandler()
         self.main()
 
     def show_history(self):
+        """Shows the user their history"""
         history = self.db_handler.fetch_history()
         if not history:
             print("[bold red]No history found![/bold red]")
@@ -35,6 +35,7 @@ class Console:
         self.display_table(history, headers, title="Prompt History")
 
     def export_history(self):
+        """Exports history database to a file"""
         prompt = input("Choose format to export:\n1 - TXT\n2 - CSV\n3 - JSON\nYour choice: ")
         try:
             match prompt:
@@ -49,13 +50,14 @@ class Console:
                     print("History exported to history.json")
                 case _:
                     print("Invalid choice!")
-        except Exception as e:
+        except IOError as e:
             print(f"An error occurred during export: {e}")
 
     @staticmethod
     def display_table(data, headers, title="Data Table"):
+        """Displays a response table"""
         console = RichConsole()
-        table = Table(title=title, show_header=True, header_style=header_style)
+        table = Table(title=title, show_header=True, header_style=global_variables.HEADER_STYLE)
         for header in headers:
             table.add_column(header, justify="center")
         for row in data:
@@ -63,6 +65,7 @@ class Console:
         console.print(table)
 
     def print_result(self, result):
+        """Prints a response into a console interface"""
         prompt_2 = input("1 - Print a table\n"
                          "2 - Print a list\n"
                          "Your choice: ")
@@ -74,6 +77,7 @@ class Console:
             print("Invalid input!")
 
     def to_table(self, result):
+        """Transforms a response into a table"""
         if not result:
             print("[bold red]No data to display![/bold red]")
             return
@@ -83,27 +87,34 @@ class Console:
 
     @staticmethod
     def to_list(result):
+        """Transform a response into a list"""
         for i in result:
             print()
             for key, value in i.items():
                 print(f"{str(key)}: {value}")
 
     def main(self):
+        """The main menu of this lab work"""
         try:
             while True:
-                prompt = input("\n1 - Posts\n2 - Comments\n3 - Albums\n4 - Photos\n5 - Todos\n6 - Users\n"
-                               "7 - View History\n8 - Export History\nYour choice: ")
+                prompt = input("\n1 - Posts\n2 - Comments\n3 - Albums\n"
+                               "4 - Photos\n5 - Todos\n6 - Users\n"
+                               "7 - View History\n8 - Export History\n9 - Unit tests\nYour choice: ")
                 if prompt == "7":
                     logger.info("[Lab 7] Read prompt history")
                     self.show_history()
                     continue
-                elif prompt == "8":
+                if prompt == "8":
                     logger.info("[Lab 7] Exported prompt history")
                     self.export_history()
                     continue
+                if prompt == "9":
+                    logger.info("[Lab 7] Started unit tests")
+                    UnitTest.run_unit_tests()
+                    continue
 
-                entity = entity_map.get(prompt)
-                logger.info(f"[Lab 7] Selected entity: {entity}")
+                entity = global_variables.ENTITY_MAP.get(prompt)
+                logger.info("[Lab 7] Selected entity: %s", entity)
                 if not entity:
                     break
 
@@ -111,8 +122,12 @@ class Console:
                 match action:
                     case "1":
                         logger.info("[Lab 7] GET request")
-                        result = NetworkRequest.get(self.uow, entity, self.db_handler)
-                        self.print_result(result)
+                        try:
+                            result = NetworkRequest.get(self.uow, entity, self.db_handler)
+                            self.print_result(result)
+                        except requests.HTTPError as e:
+                            logger.warning(e)
+                            print(e)
                     case "2":
                         logger.info("[Lab 7] POST request")
                         NetworkRequest.post(self.uow, entity, self.db_handler)

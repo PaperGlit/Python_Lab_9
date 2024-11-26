@@ -1,24 +1,25 @@
-from Data.Lab8.BLL.classes.data_processor import DataProcessor
-from Data.Shared.classes.data_io import DataIO
-import matplotlib.pyplot as plt
-import seaborn as sns
+"""The user interface of the lab work"""
 import logging
+import seaborn as sns
+import matplotlib.pyplot as plt
+from Data.Shared.classes.data_io import DataIO
+from Data.Lab8.BLL.classes.data_processor import DataProcessor
 
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class Console:
-    _instances = {}
+    """The console class of this lab work"""
+    instance = None
 
-    def __call__(self, *args, **kwargs):
-        if self not in self._instances:
-            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
-        else:
-            self._instances[self].__init__(*args, **kwargs)
-        return self._instances[self]
+    def __new__(cls):
+        if cls.instance is None:
+            cls.instance = super(Console, cls).__new__(cls)
+        return cls.instance
 
-    def __init__(self, file_path='data.csv', group_column='Category', value_column='Purchase Amount (USD)'):
+    def __init__(self, file_path='data.csv', group_column='Category',
+                 value_column='Purchase Amount (USD)'):
         self.file_path = f"Data/Lab8/Imports/{file_path}"
         self.data = None
         self.group_column = group_column
@@ -27,6 +28,7 @@ class Console:
 
     @staticmethod
     def annotate(ax, group_column, data, is_boxplot=False):
+        """Creates the annotations for the plots"""
         unique_categories = data[group_column].unique()
         for i, element in enumerate(ax.patches[:len(unique_categories)]):
             category_name = unique_categories[i]
@@ -38,6 +40,7 @@ class Console:
             ax.text(center_x, height_y + 0.5, category_name, ha='center', fontsize=10)
 
     def basic_visualization(self):
+        """Outputs basic visualization of the imported data"""
         prepared_data = DataProcessor.prepare_data(self.data, self.group_column, self.value_column)
         fig, ax = plt.subplots(figsize=(10, 6))
         ax.bar(prepared_data[self.group_column], prepared_data[self.value_column], color='skyblue')
@@ -53,6 +56,7 @@ class Console:
         logger.info("[Lab 8] Ended making basic graph")
 
     def advanced_visualization(self):
+        """Outputs advanced histogram of the imported data"""
         prepared_data = DataProcessor.prepare_data(self.data, self.group_column, self.value_column)
         fig, ax = plt.subplots(figsize=(10, 6))
         sns.histplot(prepared_data[self.value_column], kde=True, ax=ax, color='green')
@@ -65,9 +69,11 @@ class Console:
         logger.info("[Lab 8] Ended making advanced graph")
 
     def multiple_subplots(self):
+        """Outputs multiple subplots of the imported data"""
         prepared_data = DataProcessor.prepare_data(self.data, self.group_column, self.value_column)
         fig, axs = plt.subplots(1, 2, figsize=(14, 6))
-        sns.barplot(x=self.group_column, y=self.value_column, data=prepared_data, ax=axs[0], color='skyblue')
+        sns.barplot(x=self.group_column, y=self.value_column,
+                    data=prepared_data, ax=axs[0], color='skyblue')
         axs[0].set_title(f"Barplot of {self.value_column}")
         axs[0].set_xlabel(self.group_column)
         axs[0].set_ylabel(self.value_column)
@@ -83,6 +89,7 @@ class Console:
         logger.info("[Lab 8] Ended making multiple graphs")
 
     def main(self):
+        """The main menu of this lab work"""
         try:
             self.data = DataIO.load_data(self.file_path)
         except FileNotFoundError as e:

@@ -1,0 +1,623 @@
+************* Module Lab1.BLL.functions.calculate
+Data\Lab1\BLL\functions\calculate.py:18:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab1\BLL\functions\calculate.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab1\BLL\functions\calculate.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab1\BLL\functions\calculate.py:1:0: R0911: Too many return statements (8/6) (too-many-return-statements)
+************* Module Lab1.BLL.functions.perform_calculation
+Data\Lab1\BLL\functions\perform_calculation.py:26:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab1\BLL\functions\perform_calculation.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab1\BLL\functions\perform_calculation.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab1\BLL\functions\perform_calculation.py:4:0: C0412: Imports from package Data are not grouped (ungrouped-imports)
+************* Module Lab1.UI.classes.console
+Data\Lab1\UI\classes\console.py:42:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab1\UI\classes\console.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab1\UI\classes\console.py:10:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab1\UI\classes\console.py:15:36: E1101: Super of 'Console' has no '__call__' member (no-member)
+Data\Lab1\UI\classes\console.py:15:36: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+Data\Lab1\UI\classes\console.py:24:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab1\UI\classes\console.py:41:19: W0718: Catching too general exception Exception (broad-exception-caught)
+Data\Lab1\UI\classes\console.py:4:0: C0411: standard import "logging" should be placed before first party imports "Data.Shared.classes.history.History", "Data.Lab1.UI.functions.calculator_settings", "Data.Lab1.BLL.functions.perform_calculation"  (wrong-import-order)
+************* Module Lab1.UI.functions.calculator_result
+Data\Lab1\UI\functions\calculator_result.py:18:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab1\UI\functions\calculator_result.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab1\UI\functions\calculator_result.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab1\UI\functions\calculator_result.py:10:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+Data\Lab1\UI\functions\calculator_result.py:3:0: C0411: standard import "logging" should be placed before first party imports "global_variables", "Data.Lab1.BLL.functions.calculate"  (wrong-import-order)
+************* Module Lab1.UI.functions.calculator_settings
+Data\Lab1\UI\functions\calculator_settings.py:6:0: C0301: Line too long (117/100) (line-too-long)
+Data\Lab1\UI\functions\calculator_settings.py:17:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab1\UI\functions\calculator_settings.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab1\UI\functions\calculator_settings.py:5:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module Lab1.UI.functions.change_digits
+Data\Lab1\UI\functions\change_digits.py:17:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab1\UI\functions\change_digits.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab1\UI\functions\change_digits.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab1\UI\functions\change_digits.py:12:8: R1723: Unnecessary "else" after "break", remove the "else" and de-indent the code inside it (no-else-break)
+Data\Lab1\UI\functions\change_digits.py:2:0: C0411: standard import "logging" should be placed before first party import "Data.Shared.classes.validators.Validators"  (wrong-import-order)
+************* Module Lab1.UI.functions.num_prompt
+Data\Lab1\UI\functions\num_prompt.py:8:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab1\UI\functions\num_prompt.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab1\UI\functions\num_prompt.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab1\UI\functions\num_prompt.py:1:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+************* Module Lab1.UI.functions.try_again
+Data\Lab1\UI\functions\try_again.py:6:0: C0301: Line too long (116/100) (line-too-long)
+Data\Lab1\UI\functions\try_again.py:12:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab1\UI\functions\try_again.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab1\UI\functions\try_again.py:5:0: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab1\UI\functions\try_again.py:5:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+************* Module Lab2.BLL.classes.calculator
+Data\Lab2\BLL\classes\calculator.py:31:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab2\BLL\classes\calculator.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab2\BLL\classes\calculator.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab2\BLL\classes\calculator.py:14:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab2\BLL\classes\calculator.py:14:4: R0911: Too many return statements (8/6) (too-many-return-statements)
+Data\Lab2\BLL\classes\calculator.py:4:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module Lab2.UI.classes.console
+Data\Lab2\UI\classes\console.py:80:0: C0301: Line too long (104/100) (line-too-long)
+Data\Lab2\UI\classes\console.py:99:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab2\UI\classes\console.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab2\UI\classes\console.py:12:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab2\UI\classes\console.py:17:36: E1101: Super of 'Console' has no '__call__' member (no-member)
+Data\Lab2\UI\classes\console.py:17:36: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+Data\Lab2\UI\classes\console.py:26:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab2\UI\classes\console.py:47:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab2\UI\classes\console.py:47:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+Data\Lab2\UI\classes\console.py:79:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab2\UI\classes\console.py:89:20: R1723: Unnecessary "else" after "break", remove the "else" and de-indent the code inside it (no-else-break)
+Data\Lab2\UI\classes\console.py:4:0: C0411: standard import "logging" should be placed before first party imports "Data.Lab2.BLL.classes.calculator.Calculator", "Data.Shared.classes.history.History", "Data.Shared.classes.validators.Validators"  (wrong-import-order)
+************* Module Lab3.BLL.classes.ascii
+Data\Lab3\BLL\classes\ascii.py:35:0: C0301: Line too long (110/100) (line-too-long)
+Data\Lab3\BLL\classes\ascii.py:36:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab3\BLL\classes\ascii.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab3\BLL\classes\ascii.py:5:0: E0401: Unable to import 'pyfiglet' (import-error)
+Data\Lab3\BLL\classes\ascii.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab3\BLL\classes\ascii.py:10:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab3\BLL\classes\ascii.py:22:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab3\BLL\classes\ascii.py:5:0: C0411: third party import "pyfiglet.figlet_format" should be placed before first party import "global_variables"  (wrong-import-order)
+************* Module Lab3.UI.classes.console
+Data\Lab3\UI\classes\console.py:67:0: C0301: Line too long (116/100) (line-too-long)
+Data\Lab3\UI\classes\console.py:90:0: C0301: Line too long (124/100) (line-too-long)
+Data\Lab3\UI\classes\console.py:97:0: C0301: Line too long (115/100) (line-too-long)
+Data\Lab3\UI\classes\console.py:103:0: C0301: Line too long (109/100) (line-too-long)
+Data\Lab3\UI\classes\console.py:167:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab3\UI\classes\console.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab3\UI\classes\console.py:5:0: E0401: Unable to import 'pyfiglet' (import-error)
+Data\Lab3\UI\classes\console.py:13:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab3\UI\classes\console.py:18:36: E1101: Super of 'Console' has no '__call__' member (no-member)
+Data\Lab3\UI\classes\console.py:18:36: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+Data\Lab3\UI\classes\console.py:27:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab3\UI\classes\console.py:59:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab3\UI\classes\console.py:70:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab3\UI\classes\console.py:79:12: R1724: Unnecessary "elif" after "continue", remove the leading "el" from "elif" (no-else-continue)
+Data\Lab3\UI\classes\console.py:88:24: E0602: Undefined variable 'file_upload' (undefined-variable)
+Data\Lab3\UI\classes\console.py:95:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab3\UI\classes\console.py:111:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab3\UI\classes\console.py:136:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab3\UI\classes\console.py:5:0: C0411: third party import "pyfiglet.FigletFont" should be placed before first party imports "global_variables", "Data.Lab3.BLL.classes.ascii.Ascii"  (wrong-import-order)
+Data\Lab3\UI\classes\console.py:7:0: C0411: standard import "logging" should be placed before third party import "pyfiglet.FigletFont" and first party imports "global_variables", "Data.Lab3.BLL.classes.ascii.Ascii", "Data.Shared.classes.data_io.DataIO"  (wrong-import-order)
+Data\Lab3\UI\classes\console.py:6:0: C0412: Imports from package Data are not grouped (ungrouped-imports)
+************* Module Lab4.BLL.classes.ascii
+Data\Lab4\BLL\classes\ascii.py:8:0: C0301: Line too long (135/100) (line-too-long)
+Data\Lab4\BLL\classes\ascii.py:37:0: C0301: Line too long (105/100) (line-too-long)
+Data\Lab4\BLL\classes\ascii.py:94:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab4\BLL\classes\ascii.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab4\BLL\classes\ascii.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab4\BLL\classes\ascii.py:7:0: R0902: Too many instance attributes (10/7) (too-many-instance-attributes)
+Data\Lab4\BLL\classes\ascii.py:8:4: R0913: Too many arguments (9/5) (too-many-arguments)
+Data\Lab4\BLL\classes\ascii.py:8:4: R0917: Too many positional arguments (9/5) (too-many-positional-arguments)
+Data\Lab4\BLL\classes\ascii.py:20:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab4\BLL\classes\ascii.py:48:4: R0914: Too many local variables (17/15) (too-many-locals)
+Data\Lab4\BLL\classes\ascii.py:86:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Lab4\BLL\classes\ascii.py:7:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module Lab4.UI.classes.console
+Data\Lab4\UI\classes\console.py:42:0: C0301: Line too long (116/100) (line-too-long)
+Data\Lab4\UI\classes\console.py:82:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab4\UI\classes\console.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab4\UI\classes\console.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab4\UI\classes\console.py:11:36: E1101: Super of 'Console' has no '__call__' member (no-member)
+Data\Lab4\UI\classes\console.py:11:36: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+Data\Lab4\UI\classes\console.py:33:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab4\UI\classes\console.py:44:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab4\UI\classes\console.py:52:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab4\UI\classes\console.py:62:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab4\UI\classes\console.py:76:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module Lab5.BLL.classes.cube
+Data\Lab5\BLL\classes\cube.py:38:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab5\BLL\classes\cube.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab5\BLL\classes\cube.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab5\BLL\classes\cube.py:13:4: R0914: Too many local variables (19/15) (too-many-locals)
+Data\Lab5\BLL\classes\cube.py:28:16: W0612: Unused variable 'j' (unused-variable)
+Data\Lab5\BLL\classes\cube.py:30:20: W0612: Unused variable 'k' (unused-variable)
+************* Module Lab5.BLL.classes.pyramid
+Data\Lab5\BLL\classes\pyramid.py:43:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab5\BLL\classes\pyramid.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab5\BLL\classes\pyramid.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module Lab5.BLL.classes.shape
+Data\Lab5\BLL\classes\shape.py:69:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab5\BLL\classes\shape.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab5\BLL\classes\shape.py:5:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab5\BLL\classes\shape.py:27:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\BLL\classes\shape.py:31:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\BLL\classes\shape.py:35:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\BLL\classes\shape.py:39:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\BLL\classes\shape.py:45:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\BLL\classes\shape.py:56:16: W0106: Expression "shape.append(empty_layer) if self.pos_z > 0 else shape.insert(0, empty_layer)" is assigned to nothing (expression-not-assigned)
+Data\Lab5\BLL\classes\shape.py:62:20: W0106: Expression "shape[i].append(empty_row) if self.pos_y > 0 else shape[i].insert(0, empty_row)" is assigned to nothing (expression-not-assigned)
+Data\Lab5\BLL\classes\shape.py:68:24: W0106: Expression "shape[i][j].append(' ') if self.pos_x < 0 else shape[i][j].insert(0, ' ')" is assigned to nothing (expression-not-assigned)
+************* Module Lab5.BLL.classes.sphere
+Data\Lab5\BLL\classes\sphere.py:40:0: C0301: Line too long (119/100) (line-too-long)
+Data\Lab5\BLL\classes\sphere.py:69:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab5\BLL\classes\sphere.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab5\BLL\classes\sphere.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab5\BLL\classes\sphere.py:23:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\BLL\classes\sphere.py:37:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module Lab5.UI.classes.console
+Data\Lab5\UI\classes\console.py:107:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab5\UI\classes\console.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab5\UI\classes\console.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab5\UI\classes\console.py:13:36: E1101: Super of 'Console' has no '__call__' member (no-member)
+Data\Lab5\UI\classes\console.py:13:36: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+Data\Lab5\UI\classes\console.py:36:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\UI\classes\console.py:58:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\UI\classes\console.py:68:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\UI\classes\console.py:90:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab5\UI\classes\console.py:2:0: C0411: standard import "logging" should be placed before first party import "Data.Shared.classes.validators.Validators"  (wrong-import-order)
+************* Module Lab6.BLL.classes.calculator
+Data\Lab6\BLL\classes\calculator.py:40:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab6\BLL\classes\calculator.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab6\BLL\classes\calculator.py:5:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab6\BLL\classes\calculator.py:16:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab6\BLL\classes\calculator.py:16:4: R0911: Too many return statements (7/6) (too-many-return-statements)
+Data\Lab6\BLL\classes\calculator.py:5:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module Lab6.UI.classes.console
+Data\Lab6\UI\classes\console.py:88:0: C0301: Line too long (104/100) (line-too-long)
+Data\Lab6\UI\classes\console.py:94:0: C0301: Line too long (117/100) (line-too-long)
+Data\Lab6\UI\classes\console.py:105:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab6\UI\classes\console.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab6\UI\classes\console.py:13:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab6\UI\classes\console.py:18:36: E1101: Super of 'Console' has no '__call__' member (no-member)
+Data\Lab6\UI\classes\console.py:18:36: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+Data\Lab6\UI\classes\console.py:27:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab6\UI\classes\console.py:54:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab6\UI\classes\console.py:54:4: R1711: Useless return at end of function or method (useless-return)
+Data\Lab6\UI\classes\console.py:61:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab6\UI\classes\console.py:61:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+Data\Lab6\UI\classes\console.py:87:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab6\UI\classes\console.py:6:0: C0411: standard import "unittest" should be placed before first party imports "Data.Lab6.BLL.classes.calculator.Calculator", "Data.Shared.classes.history.History", "Data.Shared.classes.validators.Validators", "Data.Shared.classes.unit_test.UnitTest", "global_variables.MEMORY_OPERATIONS"  (wrong-import-order)
+Data\Lab6\UI\classes\console.py:7:0: C0411: standard import "logging" should be placed before first party imports "Data.Lab6.BLL.classes.calculator.Calculator", "Data.Shared.classes.history.History", "Data.Shared.classes.validators.Validators", "Data.Shared.classes.unit_test.UnitTest", "global_variables.MEMORY_OPERATIONS"  (wrong-import-order)
+************* Module Lab7.BLL.classes.network_request
+Data\Lab7\BLL\classes\network_request.py:75:0: C0301: Line too long (115/100) (line-too-long)
+Data\Lab7\BLL\classes\network_request.py:79:0: C0325: Unnecessary parens after 'not' keyword (superfluous-parens)
+Data\Lab7\BLL\classes\network_request.py:81:0: C0325: Unnecessary parens after 'not' keyword (superfluous-parens)
+Data\Lab7\BLL\classes\network_request.py:87:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab7\BLL\classes\network_request.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab7\BLL\classes\network_request.py:3:0: W0401: Wildcard import global_variables (wildcard-import)
+Data\Lab7\BLL\classes\network_request.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab7\BLL\classes\network_request.py:8:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\BLL\classes\network_request.py:11:12: R1705: Unnecessary "elif" after "return", remove the leading "el" from "elif" (no-else-return)
+Data\Lab7\BLL\classes\network_request.py:8:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+Data\Lab7\BLL\classes\network_request.py:26:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\BLL\classes\network_request.py:39:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\BLL\classes\network_request.py:44:12: W0612: Unused variable 'result' (unused-variable)
+Data\Lab7\BLL\classes\network_request.py:53:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\BLL\classes\network_request.py:58:22: W1309: Using an f-string that does not have any interpolated variables (f-string-without-interpolation)
+Data\Lab7\BLL\classes\network_request.py:63:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\BLL\classes\network_request.py:3:0: W0614: Unused import(s) os, WIDTH, HEIGHT, FONT, COLOR, COLOR_RESET, MEMORY_OPERATIONS, OPERANDS, MEMORY, DIGITS, BASE_API_URL, HEADER_STYLE and ENTITY_MAP from wildcard import of global_variables (unused-wildcard-import)
+************* Module Lab7.BLL.classes.unit_of_work
+Data\Lab7\BLL\classes\unit_of_work.py:12:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab7\BLL\classes\unit_of_work.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab7\BLL\classes\unit_of_work.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab7\BLL\classes\unit_of_work.py:4:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module Lab7.DAL.classes.api_repository
+Data\Lab7\DAL\classes\api_repository.py:32:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab7\DAL\classes\api_repository.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab7\DAL\classes\api_repository.py:5:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab7\DAL\classes\api_repository.py:10:19: W3101: Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)
+Data\Lab7\DAL\classes\api_repository.py:15:19: W3101: Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)
+Data\Lab7\DAL\classes\api_repository.py:20:19: W3101: Missing timeout argument for method 'requests.post' can cause your program to hang indefinitely (missing-timeout)
+Data\Lab7\DAL\classes\api_repository.py:25:19: W3101: Missing timeout argument for method 'requests.patch' can cause your program to hang indefinitely (missing-timeout)
+Data\Lab7\DAL\classes\api_repository.py:30:19: W3101: Missing timeout argument for method 'requests.delete' can cause your program to hang indefinitely (missing-timeout)
+Data\Lab7\DAL\classes\api_repository.py:2:0: C0411: third party import "requests" should be placed before first party import "Data.Lab7.DAL.classes.repository.Repository"  (wrong-import-order)
+************* Module Lab7.DAL.classes.database_handler
+Data\Lab7\DAL\classes\database_handler.py:51:0: C0301: Line too long (103/100) (line-too-long)
+Data\Lab7\DAL\classes\database_handler.py:56:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab7\DAL\classes\database_handler.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab7\DAL\classes\database_handler.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab7\DAL\classes\database_handler.py:12:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\database_handler.py:23:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\database_handler.py:30:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\database_handler.py:34:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\database_handler.py:36:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Lab7\DAL\classes\database_handler.py:42:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\database_handler.py:44:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Lab7\DAL\classes\database_handler.py:49:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\database_handler.py:52:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Lab7\DAL\classes\database_handler.py:55:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module Lab7.DAL.classes.repository
+Data\Lab7\DAL\classes\repository.py:15:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab7\DAL\classes\repository.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab7\DAL\classes\repository.py:1:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab7\DAL\classes\repository.py:2:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\repository.py:5:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\repository.py:8:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\repository.py:11:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\DAL\classes\repository.py:14:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module Lab7.UI.classes.console
+Data\Lab7\UI\classes\console.py:94:0: C0301: Line too long (106/100) (line-too-long)
+Data\Lab7\UI\classes\console.py:128:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab7\UI\classes\console.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab7\UI\classes\console.py:1:0: W0401: Wildcard import global_variables (wildcard-import)
+Data\Lab7\UI\classes\console.py:13:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab7\UI\classes\console.py:18:36: E1101: Super of 'Console' has no '__call__' member (no-member)
+Data\Lab7\UI\classes\console.py:18:36: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+Data\Lab7\UI\classes\console.py:28:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\UI\classes\console.py:37:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\UI\classes\console.py:52:15: W0718: Catching too general exception Exception (broad-exception-caught)
+Data\Lab7\UI\classes\console.py:56:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\UI\classes\console.py:65:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\UI\classes\console.py:76:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\UI\classes\console.py:85:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\UI\classes\console.py:91:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab7\UI\classes\console.py:96:16: R1724: Unnecessary "elif" after "continue", remove the leading "el" from "elif" (no-else-continue)
+Data\Lab7\UI\classes\console.py:106:16: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+Data\Lab7\UI\classes\console.py:5:0: C0411: third party import "rich.console.Console" should be placed before first party imports "global_variables.*", "Data.Lab7.BLL.classes.unit_of_work.UnitOfWork", "Data.Lab7.DAL.classes.database_handler.DBHandler", "Data.Lab7.BLL.classes.network_request.NetworkRequest"  (wrong-import-order)
+Data\Lab7\UI\classes\console.py:6:0: C0411: third party import "rich.table.Table" should be placed before first party imports "global_variables.*", "Data.Lab7.BLL.classes.unit_of_work.UnitOfWork", "Data.Lab7.DAL.classes.database_handler.DBHandler", "Data.Lab7.BLL.classes.network_request.NetworkRequest"  (wrong-import-order)
+Data\Lab7\UI\classes\console.py:7:0: C0411: standard import "logging" should be placed before third party imports "rich.console.Console", "rich.table.Table" and first party imports "global_variables.*", "Data.Lab7.BLL.classes.unit_of_work.UnitOfWork", "Data.Lab7.DAL.classes.database_handler.DBHandler", "Data.Lab7.BLL.classes.network_request.NetworkRequest"  (wrong-import-order)
+Data\Lab7\UI\classes\console.py:1:0: W0614: Unused import(s) os, WIDTH, HEIGHT, FONT, COLOR, COLOR_RESET, MEMORY_OPERATIONS, OPERANDS, MEMORY, DIGITS, LINK_REGEX, EMAIL_REGEX and PHONE_REGEX from wildcard import of global_variables (unused-wildcard-import)
+************* Module Lab8.BLL.classes.data_processor
+Data\Lab8\BLL\classes\data_processor.py:11:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab8\BLL\classes\data_processor.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab8\BLL\classes\data_processor.py:1:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab8\BLL\classes\data_processor.py:3:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab8\BLL\classes\data_processor.py:7:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module Lab8.UI.classes.console
+Data\Lab8\UI\classes\console.py:21:0: C0301: Line too long (108/100) (line-too-long)
+Data\Lab8\UI\classes\console.py:70:0: C0301: Line too long (109/100) (line-too-long)
+Data\Lab8\UI\classes\console.py:110:0: C0304: Final newline missing (missing-final-newline)
+Data\Lab8\UI\classes\console.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Lab8\UI\classes\console.py:3:0: E0401: Unable to import 'matplotlib.pyplot' (import-error)
+Data\Lab8\UI\classes\console.py:4:0: E0401: Unable to import 'seaborn' (import-error)
+Data\Lab8\UI\classes\console.py:11:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Lab8\UI\classes\console.py:16:36: E1101: Super of 'Console' has no '__call__' member (no-member)
+Data\Lab8\UI\classes\console.py:16:36: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+Data\Lab8\UI\classes\console.py:29:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab8\UI\classes\console.py:40:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab8\UI\classes\console.py:55:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab8\UI\classes\console.py:67:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab8\UI\classes\console.py:85:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Lab8\UI\classes\console.py:3:0: C0411: third party import "matplotlib.pyplot" should be placed before first party imports "Data.Lab8.BLL.classes.data_processor.DataProcessor", "Data.Shared.classes.data_io.DataIO"  (wrong-import-order)
+Data\Lab8\UI\classes\console.py:4:0: C0411: third party import "seaborn" should be placed before first party imports "Data.Lab8.BLL.classes.data_processor.DataProcessor", "Data.Shared.classes.data_io.DataIO"  (wrong-import-order)
+Data\Lab8\UI\classes\console.py:5:0: C0411: standard import "logging" should be placed before third party imports "matplotlib.pyplot", "seaborn" and first party imports "Data.Lab8.BLL.classes.data_processor.DataProcessor", "Data.Shared.classes.data_io.DataIO"  (wrong-import-order)
+************* Module Shared.classes.data_io
+Data\Shared\classes\data_io.py:50:0: C0304: Final newline missing (missing-final-newline)
+Data\Shared\classes\data_io.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Shared\classes\data_io.py:1:0: E0401: Unable to import 'pandas' (import-error)
+Data\Shared\classes\data_io.py:2:0: E0401: Unable to import 'mpld3' (import-error)
+Data\Shared\classes\data_io.py:10:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Shared\classes\data_io.py:12:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\data_io.py:18:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+Data\Shared\classes\data_io.py:19:12: W0707: Consider explicitly re-raising using 'raise FileNotFoundError(f'Error loading data: {e}') from e' (raise-missing-from)
+Data\Shared\classes\data_io.py:22:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\data_io.py:30:15: W0718: Catching too general exception Exception (broad-exception-caught)
+Data\Shared\classes\data_io.py:27:17: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Shared\classes\data_io.py:34:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\data_io.py:43:25: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Shared\classes\data_io.py:48:20: W0707: Consider explicitly re-raising using 'except IOError as exc' and 'raise IOError('The file could not be uploaded, please try again') from exc' (raise-missing-from)
+Data\Shared\classes\data_io.py:3:0: C0411: standard import "os" should be placed before third party imports "pandas", "mpld3.fig_to_html" (wrong-import-order)
+Data\Shared\classes\data_io.py:4:0: C0411: standard import "logging" should be placed before third party imports "pandas", "mpld3.fig_to_html" (wrong-import-order)
+************* Module Shared.classes.history
+Data\Shared\classes\history.py:28:0: C0304: Final newline missing (missing-final-newline)
+Data\Shared\classes\history.py:28:0: C0301: Line too long (105/100) (line-too-long)
+Data\Shared\classes\history.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Shared\classes\history.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Shared\classes\history.py:9:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\history.py:11:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Shared\classes\history.py:15:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\history.py:17:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Shared\classes\history.py:25:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\history.py:27:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+************* Module Shared.classes.incorrect_character_exception
+Data\Shared\classes\incorrect_character_exception.py:4:0: C0304: Final newline missing (missing-final-newline)
+Data\Shared\classes\incorrect_character_exception.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Shared\classes\incorrect_character_exception.py:1:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module Shared.classes.unit_test
+Data\Shared\classes\unit_test.py:112:0: C0301: Line too long (110/100) (line-too-long)
+Data\Shared\classes\unit_test.py:170:0: C0304: Final newline missing (missing-final-newline)
+Data\Shared\classes\unit_test.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Shared\classes\unit_test.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Shared\classes\unit_test.py:16:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\unit_test.py:20:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\unit_test.py:24:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\unit_test.py:29:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\unit_test.py:36:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\unit_test.py:137:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Shared\classes\unit_test.py:149:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+Data\Shared\classes\unit_test.py:161:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+************* Module Shared.classes.validators
+Data\Shared\classes\validators.py:39:0: C0301: Line too long (115/100) (line-too-long)
+Data\Shared\classes\validators.py:44:0: C0301: Line too long (115/100) (line-too-long)
+Data\Shared\classes\validators.py:79:0: C0301: Line too long (101/100) (line-too-long)
+Data\Shared\classes\validators.py:207:0: C0325: Unnecessary parens after 'not' keyword (superfluous-parens)
+Data\Shared\classes\validators.py:246:0: C0304: Final newline missing (missing-final-newline)
+Data\Shared\classes\validators.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+Data\Shared\classes\validators.py:15:0: C0115: Missing class docstring (missing-class-docstring)
+Data\Shared\classes\validators.py:17:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:20:12: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+Data\Shared\classes\validators.py:27:12: W0707: Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Invalid input, please enter a valid non-negative integer number') from exc' (raise-missing-from)
+Data\Shared\classes\validators.py:30:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:50:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:53:12: R1705: Unnecessary "elif" after "return", remove the leading "el" from "elif" (no-else-return)
+Data\Shared\classes\validators.py:65:20: W0707: Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Please enter a valid number / memory operation') from exc' (raise-missing-from)
+Data\Shared\classes\validators.py:68:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:73:12: W0707: Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Please enter a valid number') from exc' (raise-missing-from)
+Data\Shared\classes\validators.py:76:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:79:12: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+Data\Shared\classes\validators.py:86:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:112:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:121:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:123:12: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+Data\Shared\classes\validators.py:139:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:151:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:179:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:195:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:204:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:211:12: W0707: Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Incorrect value, please try again.') from exc' (raise-missing-from)
+Data\Shared\classes\validators.py:215:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:228:4: C0116: Missing function or method docstring (missing-function-docstring)
+Data\Shared\classes\validators.py:8:0: C0411: standard import "logging" should be placed before first party imports "global_variables", "Data.Shared.classes.history.History", "Data.Shared.classes.data_io.DataIO", "Data.Lab5.BLL.classes.cube.Cube", "Data.Lab5.BLL.classes.pyramid.Pyramid", "Data.Lab5.BLL.classes.sphere.Sphere"  (wrong-import-order)
+************* Module classes.console
+UI\classes\console.py:60:0: C0304: Final newline missing (missing-final-newline)
+UI\classes\console.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+UI\classes\console.py:15:0: C0115: Missing class docstring (missing-class-docstring)
+UI\classes\console.py:20:36: E1101: Super of 'Console' has no '__call__' member (no-member)
+UI\classes\console.py:20:36: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+UI\classes\console.py:29:4: C0116: Missing function or method docstring (missing-function-docstring)
+UI\classes\console.py:60:12: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+UI\classes\console.py:9:0: C0411: standard import "logging" should be placed before first party imports "Data.Lab1.UI.classes.console", "Data.Lab2.UI.classes.console", "Data.Lab3.UI.classes.console" (...) "Data.Lab6.UI.classes.console", "Data.Lab7.UI.classes.console", "Data.Lab8.UI.classes.console"  (wrong-import-order)
+************* Module runner
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab2.UI.classes.console:[63:85]
+==Lab6.UI.classes.console:[72:93]
+        print("Result : " + str(result.result))
+        try_again = input("\nCalculation has finished successfully! \n"
+                          "Current options: \n"
+                          "Try again? (Y / N) \n"
+                          "Store a value into memory? (MS / M+ / M-) \n"
+                          "Your choice: ").lower()
+        if try_again in MEMORY_OPERATIONS:
+            Validators.validate_memory(try_again, result.result)
+        elif try_again == "y":
+            return False
+        else:
+            return True
+
+
+    def settings(self):
+        settings_prompt = input("\n1 - Change the amount of digits after a decimal point in a number \n"
+                                "2 - Clear history\n"
+                                "Your choice: ")
+        match settings_prompt:
+            case "1":
+                while True: (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab1.BLL.functions.calculate:[1:18]
+==Lab2.BLL.classes.calculator:[14:31]
+        match operator:
+            case "+":
+                return num1 + num2
+            case "-":
+                return num1 - num2
+            case "*":
+                return num1 * num2
+            case "/":
+                return num1 / num2
+            case "^":
+                return num1 ** num2
+            case "root":
+                return num1 ** (1 / num2)
+            case "%":
+                return num1 % num2
+            case _:
+                return 0.0 (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab1.UI.classes.console:[6:25]
+==Lab2.UI.classes.console:[8:27]
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
+
+class Console:
+    _instances = {}
+
+    def __call__(self, *args, **kwargs):
+        if self not in self._instances:
+            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
+        else:
+            self._instances[self].__init__(*args, **kwargs)
+        return self._instances[self]
+
+    def __init__(self):
+        self.main()
+
+    @staticmethod
+    def main():
+        while True: (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab4.UI.classes.console:[63:73]
+==Lab5.UI.classes.console:[91:101]
+                             "1 - Red\n"
+                             "2 - Green\n"
+                             "3 - Yellow\n"
+                             "4 - Blue\n"
+                             "5 - Magenta\n"
+                             "6 - Cyan\n"
+                             "7 - Light gray\n"
+                             "8 - Random\n"
+                             "0 - Default\n"
+                             "Your choice: ") (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab1.UI.classes.console:[6:24]
+==Lab3.UI.classes.console:[9:27]
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
+
+class Console:
+    _instances = {}
+
+    def __call__(self, *args, **kwargs):
+        if self not in self._instances:
+            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
+        else:
+            self._instances[self].__init__(*args, **kwargs)
+        return self._instances[self]
+
+    def __init__(self):
+        self.main()
+
+    @staticmethod
+    def main(): (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab8.UI.classes.console:[7:21]
+==classes.console:[11:25]
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
+
+class Console:
+    _instances = {}
+
+    def __call__(self, *args, **kwargs):
+        if self not in self._instances:
+            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
+        else:
+            self._instances[self].__init__(*args, **kwargs)
+        return self._instances[self]
+
+    def __init__(self): (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab3.UI.classes.console:[9:23]
+==Lab7.UI.classes.console:[9:23]
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
+
+class Console:
+    _instances = {}
+
+    def __call__(self, *args, **kwargs):
+        if self not in self._instances:
+            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
+        else:
+            self._instances[self].__init__(*args, **kwargs)
+        return self._instances[self]
+
+    def __init__(self): (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab2.UI.classes.console:[8:22]
+==Lab6.UI.classes.console:[9:23]
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
+
+class Console:
+    _instances = {}
+
+    def __call__(self, *args, **kwargs):
+        if self not in self._instances:
+            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
+        else:
+            self._instances[self].__init__(*args, **kwargs)
+        return self._instances[self]
+
+    def __init__(self): (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab1.UI.classes.console:[6:20]
+==Lab5.UI.classes.console:[4:18]
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
+
+class Console:
+    _instances = {}
+
+    def __call__(self, *args, **kwargs):
+        if self not in self._instances:
+            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
+        else:
+            self._instances[self].__init__(*args, **kwargs)
+        return self._instances[self]
+
+    def __init__(self): (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab3.UI.classes.console:[136:144]
+==Lab4.UI.classes.console:[62:70]
+        color_prompt = input("Enter the color of your ASCII art:\n"
+                             "1 - Red\n"
+                             "2 - Green\n"
+                             "3 - Yellow\n"
+                             "4 - Blue\n"
+                             "5 - Magenta\n"
+                             "6 - Cyan\n"
+                             "7 - Light gray\n" (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab3.UI.classes.console:[137:144]
+==Lab5.UI.classes.console:[91:98]
+                             "1 - Red\n"
+                             "2 - Green\n"
+                             "3 - Yellow\n"
+                             "4 - Blue\n"
+                             "5 - Magenta\n"
+                             "6 - Cyan\n"
+                             "7 - Light gray\n" (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab1.UI.classes.console:[9:20]
+==Lab4.UI.classes.console:[5:16]
+class Console:
+    _instances = {}
+
+    def __call__(self, *args, **kwargs):
+        if self not in self._instances:
+            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
+        else:
+            self._instances[self].__init__(*args, **kwargs)
+        return self._instances[self]
+
+    def __init__(self): (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab3.UI.classes.console:[61:70]
+==Lab4.UI.classes.console:[36:44]
+        save_prompt = input("Do you want to save the text? (y/n): ").lower()
+        if save_prompt == "y":
+            try:
+                DataIO.upload_to_file(ftext)
+            except IOError:
+                print("An error occurred during file upload, please check if 'Uploads' folder exists and try again")
+
+    def change_symbols(self): (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab2.UI.classes.console:[48:57]
+==Lab6.UI.classes.console:[61:67]
+        num1 = Validators.validate_num("\nEnter first number (or MR / MC): ")
+
+        operator = Validators.validate_operator()
+        if operator in MEMORY_OPERATIONS:
+            Validators.validate_memory(operator, num1)
+            return False
+
+        num2 = Validators.validate_num("Enter second number (or MR / MC): ")
+ (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab5.BLL.classes.pyramid:[20:25]
+==Lab5.BLL.classes.sphere:[50:55]
+        shape = self.shape
+        z_offset = max(0, -self.pos_z)
+        depth = len(shape)
+        height = len(shape[0])
+        width = len(shape[0][0]) (duplicate-code)
+runner.py:1:0: R0801: Similar lines in 2 files
+==Lab1.UI.functions.calculator_settings:[11:17]
+==Lab2.UI.classes.console:[93:99]
+            case "2":
+                History.clear()
+                print("History cleared successfully")
+
+            case _:
+                print("Invalid input") (duplicate-code)
+
+-------------------------------------------------------------------
+Your code has been rated at 7.33/10 (previous run: 10.00/10, -2.67)

@@ -1,23 +1,24 @@
+"""The console module of this lab work"""
 from Data.Lab4.BLL.classes.ascii import Ascii
 from Data.Shared.classes.validators import Validators
 from Data.Shared.classes.data_io import DataIO
 
 
 class Console:
-    _instances = {}
+    """The console class of this lab work"""
+    instance = None
 
-    def __call__(self, *args, **kwargs):
-        if self not in self._instances:
-            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
-        else:
-            self._instances[self].__init__(*args, **kwargs)
-        return self._instances[self]
+    def __new__(cls):
+        if cls.instance is None:
+            cls.instance = super(Console, cls).__new__(cls)
+        return cls.instance
 
     def __init__(self):
         self.ascii = Ascii("ASCIIFY", color="random")
-        self.__prompt()
+        self.main()
 
-    def __prompt(self):
+    def main(self):
+        """The main menu of this lab work"""
         self.ascii.print()
         self.ascii.color = "\033[39m"
         while True:
@@ -31,6 +32,7 @@ class Console:
                 return
 
     def enter_text(self):
+        """Creates the art depending on the string input by the User"""
         text = input("Enter text: ")
         self.ascii.text = text
         ftext = self.ascii.print()
@@ -39,9 +41,11 @@ class Console:
             try:
                 DataIO.upload_to_file(ftext)
             except IOError:
-                print("An error occurred during file upload, please check if 'Uploads' folder exists and try again")
+                print("An error occurred during file upload, please check if "
+                      "'Uploads' folder exists and try again")
 
     def change_symbols(self):
+        """Allows user to change the symbols of the ASCII art"""
         shadow_prompt = input("Enter symbol for shadows: ")
         Validators.validate_shading(shadow_prompt, self, 1)
         text_prompt = input("Enter symbol for text: ")
@@ -50,6 +54,7 @@ class Console:
         Validators.validate_shading(highlight_prompt, self, 3)
 
     def change_width_and_height(self):
+        """Allows user to change the width and height of ASCII art"""
         width_prompt = input("Enter the width of an ASCII art\n"
                   "(any non-positive value will reset it to default values\n"
                   "Your choice: ")
@@ -60,6 +65,7 @@ class Console:
         Validators.validate_main_prompt(height_prompt, self)
 
     def change_color(self):
+        """Allows user to change the color of the ASCII art"""
         color_prompt = input("Enter the color of your ASCII art:\n"
                              "1 - Red\n"
                              "2 - Green\n"
@@ -74,6 +80,7 @@ class Console:
         Validators.validate_color(color_prompt, self)
 
     def justify(self):
+        """Allows user to justify the ASCII art"""
         justify_prompt = input("Enter the orientation of your ASCII art:\n"
                                "1 - Left\n"
                                "2 - Center\n"

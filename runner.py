@@ -1,3 +1,4 @@
+"""Runner function that starts the program"""
 from UI.classes.console import Console
 
 

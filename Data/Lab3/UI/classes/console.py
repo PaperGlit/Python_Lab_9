@@ -1,30 +1,28 @@
+"""The console module of this lab work"""
 import random
 import textwrap
-import GlobalVariables as Global
-from Data.Lab3.BLL.classes.ascii import Ascii
 from pyfiglet import FigletFont, figlet_format
+import global_variables
+from Data.Lab3.BLL.classes.ascii import Ascii
 from Data.Shared.classes.data_io import DataIO
-import logging
+from Data.Shared.functions.logger import logger
 
-
-logger = logging.getLogger(__name__)
-logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
 class Console:
-    _instances = {}
+    """The console class of this lab work"""
+    instance = None
 
-    def __call__(self, *args, **kwargs):
-        if self not in self._instances:
-            self._instances[self] = super(Console, self).__call__(*args, **kwargs)
-        else:
-            self._instances[self].__init__(*args, **kwargs)
-        return self._instances[self]
+    def __new__(cls):
+        if cls.instance is None:
+            cls.instance = super(Console, cls).__new__(cls)
+        return cls.instance
 
     def __init__(self):
         self.main()
 
     @staticmethod
     def main():
+        """The main menu of this lab work"""
         Ascii.print("ASCIIFY", True)
         while True:
             prompt = input("1 - Enter text\n"
@@ -45,7 +43,7 @@ class Console:
                     logger.info("[Lab 3] Changed font")
                     Console.change_font()
                 case "4":
-                    print("Current font: " + Global.font)
+                    print("Current font: " + global_variables.FONT)
                 case "5":
                     logger.info("[Lab 3] Changed width and height")
                     Console.change_width_and_height()
@@ -57,6 +55,7 @@ class Console:
 
     @staticmethod
     def enter_text():
+        """Sends the text input by the user to printing, then allows them to save the art"""
         text = input("Enter text: ")
         ftext = Ascii.print(text)
         save_prompt = input("Do you want to save the text? (y/n): ").lower()
@@ -64,58 +63,65 @@ class Console:
             try:
                 DataIO.upload_to_file(ftext)
             except IOError:
-                print("An error occurred during file upload, please check if 'Uploads' folder exists and try again")
+                print("An error occurred during file upload, please check if 'Uploads' "
+                      "folder exists and try again")
 
     @staticmethod
     def auto_font():
+        """Automatically selects the font by the input characters"""
         text = input("Enter text: ")
         symbols = input("Enter a set of characters that should be in the ASCII art: ")
         font_symbols = set(symbols) | {" ", "\n"}
         fonts = FigletFont.getFonts()
         random.shuffle(fonts)
         for font in fonts:
-            random_art = figlet_format(text, font=font, width=Global.width)
+            random_art = figlet_format(text, font=font, width=global_variables.WIDTH)
             random_art_chars = set(random_art)
             if all(char in [" ", "\n"] for char in random_art_chars):
                 continue
-            elif all(char in font_symbols for char in random_art_chars):
+            if all(char in font_symbols for char in random_art_chars):
                 print("Found font:" + font)
-                Global.font = font
+                global_variables.FONT = font
                 ftext = Ascii.print(text)
                 save_prompt = input("Do you want to save the text? (y/n): ").lower()
                 if save_prompt == "y":
                     try:
-                        file_upload(ftext)
+                        DataIO.upload_to_file(ftext)
                     except IOError:
-                        print("An error occurred during file upload, please check if 'Uploads' folder exists and try again")
+                        print("An error occurred during file upload, please check if 'Uploads' "
+                              "folder exists and try again")
                 return
         print("No fonts were found, please try again with a wider set of characters")
 
     @staticmethod
     def change_font():
+        """Changes the font of the art"""
         new_font = input("Enter the new font you want to choose\n"
-                         "You can also use 'font' to see all fonts available or 'random' to choose a random font\n"
+                         "You can also use 'font' to see all fonts available or 'random' "
+                         "to choose a random font\n"
                          "Your choice: ")
         if new_font in FigletFont.getFonts():
-            Global.font = new_font
+            global_variables.FONT = new_font
             print("Font changed successfully")
         elif new_font.lower() == "font":
-            print("Available fonts:\n" + textwrap.fill(", ".join(FigletFont.getFonts()), width=Global.width))
+            print("Available fonts:\n" + textwrap.fill(", ".join(FigletFont.getFonts()),
+                                                       width=global_variables.WIDTH))
         elif new_font.lower() == "random":
-            Global.font = random.choice(FigletFont.getFonts())
-            print("Randomly selected font: " + Global.font)
+            global_variables.FONT = random.choice(FigletFont.getFonts())
+            print("Randomly selected font: " + global_variables.FONT)
         else:
             print("Invalid font")
 
     @staticmethod
     def change_width_and_height():
+        """Changes the width and height of the art"""
         while True:
             width_prompt = input("Enter the width of an ASCII art\n"
                       "(any non-positive value will reset it to default values\n"
                       "Your choice: ")
             try:
                 width = int(width_prompt)
-                Global.width = Ascii.verify_width(width)
+                global_variables.WIDTH = Ascii.verify_width(width)
                 print("Width changed successfully")
             except ValueError:
                 print("Please enter an integer")
@@ -125,7 +131,7 @@ class Console:
                                   "Your choice: ")
             try:
                 height = int(height_prompt)
-                Global.height = height
+                global_variables.HEIGHT = height
                 print("Height changed successfully")
                 break
             except ValueError:
@@ -134,6 +140,7 @@ class Console:
 
     @staticmethod
     def change_color():
+        """Changes the color of the art"""
         color_prompt = input("Enter the color of your ASCII art:\n"
                              "1 - Red\n"
                              "2 - Green\n"
@@ -146,21 +153,21 @@ class Console:
                              "Your choice: ")
         match color_prompt:
             case "1":
-                Global.color = "\033[31m"
+                global_variables.COLOR = "\033[31m"
             case "2":
-                Global.color = "\033[32m"
+                global_variables.COLOR = "\033[32m"
             case "3":
-                Global.color = "\033[33m"
+                global_variables.COLOR = "\033[33m"
             case "4":
-                Global.color = "\033[34m"
+                global_variables.COLOR = "\033[34m"
             case "5":
-                Global.color = "\033[35m"
+                global_variables.COLOR = "\033[35m"
             case "6":
-                Global.color = "\033[36m"
+                global_variables.COLOR = "\033[36m"
             case "7":
-                Global.color = "\033[37m"
+                global_variables.COLOR = "\033[37m"
             case "0":
-                Global.color = "\033[39m"
+                global_variables.COLOR = "\033[39m"
             case _:
                 print("Invalid color choice, please try again.")
                 return

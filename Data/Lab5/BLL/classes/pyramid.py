@@ -1,8 +1,11 @@
+"""A pyramid shape"""
 from Data.Lab5.BLL.classes.shape import Shape
 
 
 class Pyramid(Shape):
+    """A pyramid shape class"""
     def create_shape(self):
+        """Creates a pyramid shape"""
         width = self.size * 2 - 1
         shape = self.create_array(width, self.size)
         start = self.size
@@ -18,6 +21,7 @@ class Pyramid(Shape):
         return final_shape
 
     def to_2d(self):
+        """Transforms the pyramid into a 2D string array"""
         shape = self.shape
         z_offset = max(0, -self.pos_z)
         depth = len(shape)
