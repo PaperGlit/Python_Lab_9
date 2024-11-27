@@ -1,0 +1,58 @@
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+DEBUG:matplotlib:matplotlib data path: C:\Users\Glit\PycharmProjects\IS_Lab_1\.venv\Lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+DEBUG:matplotlib:matplotlib data path: C:\Users\Glit\AppData\Local\Programs\Python\Python313\Lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+DEBUG:matplotlib:matplotlib data path: C:\Users\Glit\AppData\Local\Programs\Python\Python313\Lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+DEBUG:matplotlib:matplotlib data path: C:\Users\Glit\AppData\Local\Programs\Python\Python313\Lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+DEBUG:matplotlib:matplotlib data path: C:\Users\Glit\AppData\Local\Programs\Python\Python313\Lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+DEBUG:matplotlib:matplotlib data path: C:\Users\Glit\AppData\Local\Programs\Python\Python313\Lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+INFO:Data.Shared.functions.logger:Started the program
+INFO:Data.Shared.functions.logger:Started Lab 7
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+INFO:Data.Shared.functions.logger:Started the program
+INFO:Data.Shared.functions.logger:Started Lab 7
+INFO:Data.Shared.functions.logger:[Lab 7] Selected entity: photos
+INFO:Data.Shared.functions.logger:[Lab 7] POST request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com:443
+DEBUG:urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "GET /photos/1 HTTP/11" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com:443
+DEBUG:urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "POST /photos HTTP/11" 201 143
+DEBUG:matplotlib:CACHEDIR=C:\Users\Glit\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\Glit\.matplotlib\fontlist-v390.json
+INFO:Data.Shared.functions.logger:Started the program
+INFO:Data.Shared.functions.logger:Started Lab 2
+INFO:Data.Shared.functions.logger:Ended Lab 2
+INFO:Data.Shared.functions.logger:Started Lab 2

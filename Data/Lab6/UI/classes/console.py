@@ -1,22 +1,14 @@
 """The user interface of the lab work"""
-import unittest
 import global_variables
+from Data.Shared.classes.singleton import Singleton
 from Data.Shared.functions.calculator import calculate
 from Data.Shared.classes.history import History
 from Data.Shared.classes.validators import Validators
-from Data.Shared.classes.unit_test import UnitTest
 from Data.Shared.functions.logger import logger
 from Data.Shared.classes.unit_test import UnitTest
 
-class Console:
+class Console(Singleton):
     """The console class of this lab work"""
-    instance = None
-
-    def __new__(cls):
-        if cls.instance is None:
-            cls.instance = super(Console, cls).__new__(cls)
-        return cls.instance
-
     def __init__(self, digits = 3):
         self.digits = digits
         self.main()

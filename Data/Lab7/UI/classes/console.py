@@ -6,19 +6,13 @@ import global_variables
 from Data.Lab7.BLL.classes.unit_of_work import UnitOfWork
 from Data.Lab7.DAL.classes.database_handler import DBHandler
 from Data.Lab7.BLL.classes.network_request import NetworkRequest
+from Data.Shared.classes.singleton import Singleton
 from Data.Shared.classes.unit_test import UnitTest
 from Data.Shared.functions.logger import logger
 
 
-class Console:
+class Console(Singleton):
     """The console class of this lab work"""
-    instance = None
-
-    def __new__(cls):
-        if cls.instance is None:
-            cls.instance = super(Console, cls).__new__(cls)
-        return cls.instance
-
     def __init__(self):
         self.uow = UnitOfWork(global_variables.BASE_API_URL)
         self.db_handler = DBHandler()

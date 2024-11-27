@@ -7,18 +7,12 @@ import Data.Lab5.UI.classes.console
 import Data.Lab6.UI.classes.console
 import Data.Lab7.UI.classes.console
 import Data.Lab8.UI.classes.console
+from Data.Shared.classes.singleton import Singleton
 from Data.Shared.functions.logger import logger
 
 
-class Console:
+class Console(Singleton):
     """The console class of this lab work"""
-    instance = None
-
-    def __new__(cls):
-        if cls.instance is None:
-            cls.instance = super(Console, cls).__new__(cls)
-        return cls.instance
-
     def __init__(self):
         logger.info("Started the program")
         self.main()

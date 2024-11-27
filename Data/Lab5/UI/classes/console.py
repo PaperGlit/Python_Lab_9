@@ -1,16 +1,10 @@
 """The console module of this lab work"""
+from Data.Shared.classes.singleton import Singleton
 from Data.Shared.classes.validators import Validators
 
 
-class Console:
+class Console(Singleton):
     """The console class of this lab work"""
-    instance = None
-
-    def __new__(cls):
-        if cls.instance is None:
-            cls.instance = super(Console, cls).__new__(cls)
-        return cls.instance
-
     def __init__(self):
         self.main()
         self.ascii = None

@@ -4,20 +4,13 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from Data.Shared.classes.data_io import DataIO
 from Data.Lab8.BLL.classes.data_processor import DataProcessor
-
+from Data.Shared.classes.singleton import Singleton
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='Logs/logs.log', encoding='utf-8', level=logging.DEBUG)
 
-class Console:
+class Console(Singleton):
     """The console class of this lab work"""
-    instance = None
-
-    def __new__(cls):
-        if cls.instance is None:
-            cls.instance = super(Console, cls).__new__(cls)
-        return cls.instance
-
     def __init__(self, file_path='data.csv', group_column='Category',
                  value_column='Purchase Amount (USD)'):
         self.file_path = f"Data/Lab8/Imports/{file_path}"

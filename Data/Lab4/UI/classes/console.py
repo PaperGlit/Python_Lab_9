@@ -1,18 +1,12 @@
 """The console module of this lab work"""
 from Data.Lab4.BLL.classes.ascii import Ascii
+from Data.Shared.classes.singleton import Singleton
 from Data.Shared.classes.validators import Validators
 from Data.Shared.classes.data_io import DataIO
 
 
-class Console:
+class Console(Singleton):
     """The console class of this lab work"""
-    instance = None
-
-    def __new__(cls):
-        if cls.instance is None:
-            cls.instance = super(Console, cls).__new__(cls)
-        return cls.instance
-
     def __init__(self):
         self.ascii = Ascii("ASCIIFY", color="random")
         self.main()

@@ -2,17 +2,12 @@
 from Data.Shared.classes.history import History
 from Data.Lab1.UI.functions import calculator_settings
 from Data.Lab1.BLL.functions import perform_calculation
+from Data.Shared.classes.singleton import Singleton
 from Data.Shared.functions.logger import logger
 
 
-class Console:
+class Console(Singleton):
     """The class of the main menu of this lab work"""
-    instance = None
-
-    def __new__(cls):
-        if cls.instance is None:
-            cls.instance = super(Console, cls).__new__(cls)
-        return cls.instance
 
     def __init__(self):
         self.main()

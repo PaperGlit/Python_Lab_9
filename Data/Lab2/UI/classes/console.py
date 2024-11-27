@@ -4,16 +4,10 @@ from Data.Shared.functions.calculator import calculate
 from Data.Shared.classes.history import History
 from Data.Shared.classes.validators import Validators
 from Data.Shared.functions.logger import logger
+from Data.Shared.classes.singleton import Singleton
 
-
-class Console:
+class Console(Singleton):
     """The class of the user interface of the lab work"""
-    instance = None
-
-    def __new__(cls):
-        if cls.instance is None:
-            cls.instance = super(Console, cls).__new__(cls)
-        return cls.instance
 
     def __init__(self):
         self.main()
